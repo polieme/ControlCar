@@ -64,6 +64,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
      * @param view
      */
     private void action(final View view){
+        stop();//首先把已有的定时任务关闭
         scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
         scheduledExecutor.scheduleWithFixedDelay(new Runnable() {
             @Override
